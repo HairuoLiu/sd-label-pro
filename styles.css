@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #0f0f10;
+  color: white;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.panel {
+  width: 300px;
+  padding: 20px;
+  background: #18181b;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.panel input, .panel select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #27272a;
+  color: white;
+}
+
+button {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.preview {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  background: white;
+  border-radius: 12px;
+}
