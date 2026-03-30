@@ -8,15 +8,17 @@ body {
 .container {
   display: flex;
   height: 100vh;
+  flex-direction: row;
 }
 
 .panel {
-  width: 300px;
-  padding: 20px;
+  width: 320px;
+  padding: 16px;
   background: #18181b;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  overflow: auto;
 }
 
 .panel input, .panel select {
@@ -25,8 +27,53 @@ body {
   border: none;
   background: #27272a;
   color: white;
+  font-size: 16px;
 }
 
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .panel {
+    width: 100%;
+  }
+
+  .preview {
+    width: 100%;
+    padding: 12px;
+  }
+
+  canvas {
+    width: min(320px, 90vw);
+    height: auto;
+    max-width: 90vw;
+  }
+}
+
+button {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.preview {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  background: white;
+  border-radius: 12px;
+}
 button {
   margin-top: 10px;
   padding: 12px;

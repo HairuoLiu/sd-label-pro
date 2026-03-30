@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>SD Label Pro</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -23,6 +24,18 @@
 
     <label>Style</label>
     <select id="theme"></select>
+
+    <label>Background Mode</label>
+    <select id="bgStyle">
+      <option value="none">No background</option>
+      <option value="grayscale">Grayscale</option>
+      <option value="high-contrast">High Contrast</option>
+      <option value="minimal">Minimal Sketch</option>
+    </select>
+
+    <label>Import Photo Background</label>
+    <input type="file" id="bgFile" accept="image/*" />
+    <button id="clearBg">Clear Background</button>
 
     <button id="download">Download JPG</button>
   </div>
